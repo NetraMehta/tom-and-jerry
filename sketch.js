@@ -31,13 +31,14 @@ function setup(){
     background.addImage("garden", backgroundImg);
 
     cat = createSprite(800, 600);
-
+    cat.addImage("sitting", catImg1);
 }
 
 function draw() {
 
     background(255);
-    //Write condition here to evalute if tom and jerry collide
+    
+    keyPressed();
 
     drawSprites();
 }
@@ -47,8 +48,7 @@ function keyPressed(){
 
   if(keyCode === LEFT_ARROW){
       cat.velocityX = -5;
-      cat.addImage("")
+      cat.addAnimation("running", catImg2);
+      cat.changeAnimation("running", catImg2);
   }
-
-
 }
